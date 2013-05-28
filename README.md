@@ -1,6 +1,6 @@
 # Pimple Aware Controller
 
-This is a Silex service provider to provider Pimple aware controllers
+A Silex Service Provider to provide Pimple aware controllers
 
 
 ## Install
@@ -17,16 +17,10 @@ This is a Silex service provider to provider Pimple aware controllers
 ## Usage
 
 ``` php
-// bootstrap.php
-$app->register(new PimpleAwareController\ServiceProvider());
-$app->get('/user/create', 'Controller\User::create');
-```
-
-``` php
 // Controller/Base.php
 namespace Controller;
 class Base {
-    public function __construct()
+    public function __construct($app)
     {
         $this->app = $app;
     }
@@ -47,3 +41,15 @@ class User extends Base {
         return $this->display();
     }
 }
+```
+
+``` php
+// bootstrap.php
+$app->register(new PimpleAwareController\ServiceProvider());
+$app->get('/user/create', 'Controller\User::create');
+```
+
+
+## Contributing
+
+Pull requests are welcome at https://github.com/marcqualie/pimple-aware-controller

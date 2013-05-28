@@ -1,5 +1,7 @@
 {
     "name": "marcqualie/pimple-aware-controller",
+    "description": "A Silex Service Provider to provide Pimple aware controllers",
+    "license": "MIT",
     "authors": [
         {
             "name": "Marc Qualie",
