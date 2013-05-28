@@ -1,0 +1,19 @@
+{
+    "name": "marcqualie/pimple-aware-controller",
+    "authors": [
+        {
+            "name": "Marc Qualie",
+            "email": "marc@marcqualie.com",
+            "homepage": "https://marcqualie.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
